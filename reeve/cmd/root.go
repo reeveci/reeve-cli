@@ -21,6 +21,8 @@ func getDefaultConfigDir() string {
 
 var programName = os.Args[0]
 
+const configFile = ".reevecli"
+
 var defaultConfigDir = getDefaultConfigDir()
 
 const defaultAuthHeader = "Authorization"
@@ -72,7 +74,7 @@ func initConfig() {
 		configDir = getDefaultConfigDir()
 	}
 	viper.AddConfigPath(configDir)
-	viper.SetConfigName(".reevecli")
+	viper.SetConfigName(configFile)
 	viper.SetConfigType("toml")
 	if err := viper.ReadInConfig(); err != nil {
 		if _, ok := err.(viper.ConfigFileNotFoundError); !ok {

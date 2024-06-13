@@ -19,7 +19,9 @@ func init() {
 var askCommand = &cobra.Command{
 	Use:   "ask plugin command [args]...",
 	Short: "Ask the server to do something",
-	Long: `Any Reeve plugin can register commands to be executed by the CLI.
+	Long: `Ask the server to do something
+
+Any Reeve plugin can register commands to be executed by the CLI.
 Run '` + programName + ` ask -l' to get a list of available commands.`,
 	DisableFlagsInUseLine: true,
 

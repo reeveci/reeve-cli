@@ -3,7 +3,7 @@
 ## Installing
 
 ```sh
-go install github.com/reeveci/reeve-cli/reeve@v1.0.2
+go install github.com/reeveci/reeve-cli/reeve@latest
 
 reeve --help
 ```
