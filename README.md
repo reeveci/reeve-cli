@@ -15,14 +15,5 @@ Connection settings can be stored in a config file, which is located in the user
 Configuration options can be set using the `config` command.
 
 ```sh
-reeve config url https://reeve-server:9080
-```
-
-## Usage
-
-The commands available depend on the plugins that are configured for your server.
-The `--usage` switch can be used to get a list of available commands.
-
-```sh
-reeve --usage
+reeve config set url https://reeve-server:9080
 ```
