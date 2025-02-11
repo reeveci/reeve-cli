@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/reeveci/reeve-cli/reeve/crypto"
+	"github.com/reeveci/reeve-lib/crypto"
 	"github.com/spf13/cobra"
 )
 
@@ -53,7 +53,7 @@ You can disable this behavior by specifying the -T switch.`,
 			raw = strings.TrimSpace(raw)
 		}
 
-		pw, err := crypto.Argon2Hash(raw)
+		pw, err := crypto.Hash(raw)
 		if err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
